@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Shield } from "lucide-react";
+import { Shield, LayoutGrid } from "lucide-react";
 
 export const Hero = () => {
   return (
@@ -26,10 +26,33 @@ export const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+        className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12"
       >
-        Launch your career in cybersecurity with NextStep. Connect with leading security firms and kickstart your professional journey through specialized internships.
+        Launch your career with specialized internships in UI/UX Design and Cybersecurity. Connect with leading firms and kickstart your professional journey.
       </motion.p>
+      
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12"
+      >
+        <div className="glass-card p-6 text-left">
+          <LayoutGrid className="w-8 h-8 text-custom-accent mb-4" />
+          <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
+          <p className="text-muted-foreground mb-4">
+            Create intuitive and beautiful user experiences. Learn from industry experts and build a stunning portfolio.
+          </p>
+        </div>
+        <div className="glass-card p-6 text-left">
+          <Shield className="w-8 h-8 text-custom-accent mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Cybersecurity</h3>
+          <p className="text-muted-foreground mb-4">
+            Protect digital assets and learn about the latest security practices. Get hands-on experience in cyber defense.
+          </p>
+        </div>
+      </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
